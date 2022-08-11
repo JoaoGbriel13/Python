@@ -4,7 +4,7 @@ valorTotal = 0
 
 while True: 
     valorString = input('Digite os numeros: ')
-    if valorString == 'done' or 'd':
+    if valorString == 'done':
         break
     try:
         valorFloat = float(valorString)
