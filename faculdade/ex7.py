@@ -11,14 +11,21 @@ if tamanho < 5000 :
     quit()
 
 while count < tamanho : 
-    listaNumeros.append(random.randint(0, 100))
+    listaNumeros.append(random.randint(1, 100))
     count+=1
 
-def pesquisa(lista, item) :
-    return lista.index(item)
+def buscar(lista) :
+    buscar = int(input('Digite o numero que deseja encontrar: '))
+    for i, item in enumerate(lista) :
+        if item == buscar :
+            print(f'Encontrado o valor {buscar} na posição {i}')
+        if item == 0 :
+            break
+            
 
-valor = int(input('Digite o numero que deseja buscar: '))
-print(f"O valor {valor} está presente na posição {pesquisa(listaNumeros, valor)}")
+buscar(listaNumeros)
+
+
 
 
         
